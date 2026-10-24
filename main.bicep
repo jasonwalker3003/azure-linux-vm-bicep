@@ -9,11 +9,12 @@ param location string = resourceGroup().location
 param vmName string = 'vm-bicep-w03'
 param adminUsername string = 'jason'
 param vmSize string = 'Standard_B1s'
+param week string = '03'
 
 var tags = {
   env: 'lab'
   owner: 'jason'
-  week: '03'
+  week: week
 }
 
 resource nsg 'Microsoft.Network/networkSecurityGroups@2024-05-01' = {
